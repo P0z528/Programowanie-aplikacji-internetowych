@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const liczba1 = prompt('Podaj 1 liczbe')
+    const liczba2 = prompt('Podaj 2 liczbe')
+    const liczba3 = prompt('Podaj 3 liczbe')
+
+    if(liczba1<liczba2){
+        if(liczba2<liczba3) document.write(liczba1+liczba2+liczba3)
+        else document.write(liczba1+liczba3+liczba2)}
+
+    else if(liczba3<liczba1){
+        if(liczba2<liczba3) document.write(liczba2+liczba3+liczba1)
+        else document.write(liczba3+liczba2+liczba1)}
+    else {
+        if(liczba3>liczba2) document.write(liczba2+liczba1+liczba3)
+        else document.write(liczba3+liczba1+liczba2)
+    }
+
+    
+
+    </script>
+</body>
+</html>
