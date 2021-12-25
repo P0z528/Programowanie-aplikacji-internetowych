@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <input type="text" Id="liczba1"/>
+        <input type="text" Id="liczba2"/>
+        <br></br>
+        <input type="submit" name="dodawanie" value="Dodawanie" onclick="dodawanie()">
+        <input type="submit" name="odejmowanie" value="Odejmowanie" onclick="odejmowanie()"/>
+        <input type="submit" name="mnozenie" value="Mnożenie" onclick="mnozenie()"/>
+        <input type="submit" name="dzielenie" value="Dzielenie" onclick="dzielenie()"/>
+         <div class="wynik"></div>
+    </form>
+
+   
+
+    <script language="JavaScript">
+ 
+        const formularz = document.querySelector('form')
+        const div = document.querySelector('div.wynik');
+        formularz.addEventListener('submit', function(e){
+
+        e.preventDefault();
+             
+
+        function dodawanie()
+        {
+            var dod1=document.getElementById("liczba1").value;
+            var dod2=document.getElementById("liczba2").value;
+            var dodawanie=0;
+            dodawanie=dod1*1+dod2*1;
+            document.write(dodawanie);
+        }              
+
+        function odejmowanie()
+        {
+            var od1=document.getElementById("liczba1").value;
+            var od2=document.getElementById("liczba2").value;
+            var odejmowanie=0;
+            odejmowanie=od1*1-od2*1;
+            document.write(odejmowanie);
+        }
+ 
+        function mnozenie()
+        {
+            var m1=document.getElementById("liczba1").value;
+            var m2=document.getElementById("liczba2").value;
+            var mnozenie=0;
+            var mnozenie=m1*m2*1;
+            document.write(mnozenie);
+        }
+        
+        function dzielenie()
+        {
+            var dz1=document.getElementById("liczba1").value;
+            var dz2=document.getElementById("liczba2").value;
+            var dzielenie=0;
+        
+            if (dz2==0){document.getElementsByClassName("wynik").innerHTML="Nie dzieli się przez 0!";}
+            else{
+                dzielenie=dz1/dz2*1;
+                document.write(dzielenie);}
+        }
+ })  
+</script>
+
+</body>
+</html>
